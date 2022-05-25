@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Application on Local storage and Session storage</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Application on local storage and session storage</h1>
+        <br>
+        <br>
+        <button onclick="localscore()">Local Score</button>
+        <br>
+        <br>
+        <br>
+        <button onclick="sessionscore()">Session Score</button>
+
+        <script>
+            var num = 1
+            function localscore()
+            {
+                localStorage.setItem(num,"count");
+                num++;
+                alert("local score: "+localStorage.length);
+            }
+
+            var number = 1
+            function sessionscore()
+            {
+                sessionStorage.setItem(number,"count");
+                number++;
+                alert("session score: "+ sessionStorage.length);
+            }
+        </script>
+    </body>
+</html>
